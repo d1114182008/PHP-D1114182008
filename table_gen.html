@@ -5,12 +5,20 @@
     <title>我的第一份表單</title>
 </head>
 <body>
+    
     <h1>我的第一份表單</h1>
-    <form action="table_gen.php" method="get">
+    
+    <form action="table_gen.php" method="post">
+    <fieldset>
+        <legend>表格參數</legend>
        輸入表格列數:<input type="text" name="row_num" value="5"/> <br/>
        輸入表格行數:<input type="text" name="col_num" value="4"/> <br/>
+       性別:<input type="radio" name="gender" value="B" checked/>男
+       <input type="radio" name="gender" value="G"/>女
+       <input type="radio" name="gender" value="?"/>其他<br/>
        <input type="submit" value="送出"/>
        <input type="reset" value="重新輸入"/>
+    </fieldset>
     </form>
     <p>&copy;資網系-D1114182008</p>
 </body>
