@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <title>我的第一份表單</title>
 </head>
-<body>
-    
+<body>  
     <h1>我的第一份表單</h1>
-    
-    <form action="table_gen.php" method="post">
+    <form action="table_gen.php" method="post">   
+    <legend>填表人訊息</legend>   
+    <fieldset>
+       性別:<input type="radio" name="gender" value="B" checked/>男
+       <input type="radio" name="gender" value="G"/>女
+       <input type="radio" name="gender" value="?"/>其他<br/> 
+       科系:
+       <select name="dept">
+        <option value="電機">電機工程系</option>
+        <option value="資網" selected>資訊網路系</option>
+        <option value="機械">機械工程系</option>
+       </select><br/>
+       留言:
+       <textarea name="message" row="20" cols="50">請填寫留言</textarea>
+    </fieldset>
     <fieldset>
         <legend>表格參數</legend>
        輸入表格列數:<input type="text" name="row_num" value="5"/> <br/>
        輸入表格行數:<input type="text" name="col_num" value="4"/> <br/>
-       性別:<input type="radio" name="gender" value="B" checked/>男
-       <input type="radio" name="gender" value="G"/>女
-       <input type="radio" name="gender" value="?"/>其他<br/>
        <input type="submit" value="送出"/>
        <input type="reset" value="重新輸入"/>
     </fieldset>
